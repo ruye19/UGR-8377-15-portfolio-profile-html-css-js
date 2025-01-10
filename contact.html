@@ -96,29 +96,38 @@
 
       </div>
 
-      <form>
+      <form id="contactForm">
         <div class="form-container">
+          <!-- Name Input -->
           <div class="name-form">
-            <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required="" id="name">
           </div>
-          <div class="emaills">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+          <!-- Email Input -->
+          <div class="email-form">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required="" id="email">
           </div>
-          <div class="">
-            <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+          <!-- Subject Input -->
+          <div class="subject-form">
+            <input type="text" class="form-control" name="subject" placeholder="Subject" required="" id="subject">
           </div>
-          <div class="">
-            <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
+          <!-- Message Input -->
+          <div class="message-form">
+            <textarea class="form-control" name="message" placeholder="Message" required="" id="message"></textarea>
           </div>
-          <!-- <div class="text-center">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div> -->
 
-          <button type="submit">Send Message</button>
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn">Send Message</button>
+
+          <!-- Loader -->
+          <div id="loader" style="display:none;">Sending...</div>
+
+          <!-- Error/Success Messages -->
+          <div id="error-message" class="error-message" style="display:none;">Please fill out all fields correctly.
+          </div>
+          <div id="sent-message" class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
         </div>
-    </div>
-    </form><!-- End Contact Form -->
+      </form>
+
     </div>
 
   </section><!-- /Contact Section -->

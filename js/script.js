@@ -46,3 +46,67 @@ function toggleAudio(audioItem) {
     audioPlayer.currentTime = 0;  // Reset to the beginning
   }
 }
+
+
+
+
+// Function to display loader
+function showLoader() {
+  document.getElementById("loader").style.display = "block";
+}
+
+// Function to hide loader
+function hideLoader() {
+  document.getElementById("loader").style.display = "none";
+}
+
+// Function to show error message
+function showError() {
+  document.getElementById("error-message").style.display = "block";
+}
+
+// Function to hide error message
+function hideError() {
+  document.getElementById("error-message").style.display = "none";
+}
+
+// Function to show success message
+function showSuccess() {
+  document.getElementById("sent-message").style.display = "block";
+}
+
+// Function to hide success message
+function hideSuccess() {
+  document.getElementById("sent-message").style.display = "none";
+}
+
+// Function to handle form submission
+function submitMessage(event) {
+  event.preventDefault(); // Prevent form from submitting immediately
+  
+  // Get the input values
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+
+  // Reset messages
+  hideError();
+  hideSuccess();
+
+  // Validate fields
+  if (name === "" || email === "" || subject === "" || message === "") {
+      showError();  // Show error message if any field is empty
+  } else {
+      showLoader();  // Show loader when the form is being processed
+
+      // Simulate form submission delay (e.g., 2 seconds)
+      setTimeout(function() {
+          showSuccess();  // Show success message when submission is complete
+          hideLoader();   // Hide the loader
+      }, 2000);  // Simulate 2 seconds delay
+  }
+}
+
+document.getElementById("contactForm").addEventListener("submit", submitMessage);
+
