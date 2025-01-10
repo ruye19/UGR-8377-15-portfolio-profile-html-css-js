@@ -32,3 +32,17 @@ document.querySelectorAll('.audio-item').forEach(item => {
     }
   });
 });
+
+function toggleAudio(audioItem) {
+  var audioPlayer = audioItem.querySelector('.audio-player');
+  
+  // Check if the audio is paused or playing
+  if (audioPlayer.paused) {
+    // If paused, play the audio
+    audioPlayer.play();
+  } else {
+    // If playing, pause the audio
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;  // Reset to the beginning
+  }
+}

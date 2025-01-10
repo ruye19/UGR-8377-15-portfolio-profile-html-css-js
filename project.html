@@ -66,18 +66,23 @@
 
     <!-- Audio Projects -->
     <div class="audio-section">
-      <div class="audio-item">
+      <div class="audio-item" onclick="toggleAudio(this)">
         <img src="assets/image/image.png" alt="Audio Thumbnail" class="audio-thumbnail" />
-        <audio controls src="assets/audio1.mp3">description for one of my project</audio>
+        <audio class="audio-player">
+          <source src="assets/audio/Ember-2025_01_09-1.wav">
+        </audio>
         <p>This project showcases my development skills and potential for future clients.</p>
       </div>
-      <div class="audio-item">
+      <div class="audio-item" onclick="toggleAudio(this)">
         <img src="assets/image/image.png" alt="Audio Thumbnail" class="audio-thumbnail" />
-        <audio controls src="assets/audio2.mp3">thanking for doing an incredible project</audio>
+        <audio class="audio-player">
+          <source src="assets/audio/Ember-2025_01_09-2.wav">
+        </audio>
         <p>This project highlights my expertise and the quality of work delivered to satisfied clients.</p>
       </div>
     </div>
-
+    
+    
     <!-- Video Projects -->
     <div class="video-section">
       <div class="video-item">
